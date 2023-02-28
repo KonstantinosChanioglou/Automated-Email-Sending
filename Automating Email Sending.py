@@ -26,10 +26,10 @@ import datetime
 
 #pip install schedule
 
-SENDER_EMAIL = 'kostasch642@gmail.com'
-SENDER_PSW = 'kgnuhvjqgaukjmaz'
-MAIL_SERVER ='smtp.gmail.com'
-PORT = 587
+SENDER_EMAIL = '' #add your email
+SENDER_PSW = '' #if gmail, generate and add your gmail app password
+MAIL_SERVER ='smtp.gmail.com' #change according to your mail account
+PORT = 587 #change according to your mail account
 EMAIL_TEMPLATE_FILE = 'email_template.txt'
 RECIEVERS_EMAILS_FILE = 'recievers.txt'
 
@@ -85,7 +85,7 @@ def sendMail():
 
 def main():
 
-    # Run task every hour at the 30th minute
+    # Run daily at 08:00
     schedule.every().day.at("08:00").do(sendMail)
 
     # Loop so that the scheduling task
