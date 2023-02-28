@@ -53,7 +53,7 @@ def sendMail():
 
             #Write to logs
             log = open("logs.txt", "a+") #create if not exists
-            log.write('['+ printTime +'] Email Sent to '+ reciever  + "\n")
+            log.write('['+ printTime +'] Email sent to '+ reciever  + "\n")
             log.close()
 
     except Exception as e:
