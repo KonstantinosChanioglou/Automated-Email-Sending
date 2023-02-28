@@ -13,6 +13,8 @@ This project sends scheduled emails with attachement to a list of emails. In add
 +  email_template.txt
 +  recievers.txt
 
+### Create the Report.txt file in order to be attached to the email
+
 ## How to run
 + python autoEmailSending.py
 
