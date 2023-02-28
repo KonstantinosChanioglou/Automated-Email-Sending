@@ -3,6 +3,9 @@
 This project sends scheduled emails with attachement to a list of emails. In addition writing all the sending history or errors to a log file.
 
 ## Before running
+
+###Install
++ pip install schedule
 ### Fill the next fields:
 + SENDER_EMAIL
 + SENDER_PSW 
