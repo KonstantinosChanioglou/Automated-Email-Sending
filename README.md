@@ -15,6 +15,8 @@ This project sends scheduled emails with attachement to a list of emails. In add
 
 ### Create the Report.txt file in order to be attached to the email
 
+### Note: if you are using gmail server generate an app password
+
 ## How to run
 + python autoEmailSending.py
 
