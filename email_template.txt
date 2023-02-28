@@ -1,0 +1,6 @@
+Hello,
+
+This is an automated email containing the daily report file.
+
+Sincerely,
+Company Name
