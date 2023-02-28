@@ -9,7 +9,9 @@ This project sends scheduled emails with attachement to a list of emails. In add
 + MAIL_SERVER 
 + PORT 
 
-### Alter the email_template.txt and the recievers.txt with the desire email template and recievers that you want.
+### Alter the next files with the desired email template and recievers that you want:
++  email_template.txt
++  recievers.txt
 
 ## How to run
 + python autoEmailSending.py
