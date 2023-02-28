@@ -21,8 +21,7 @@ RECIEVERS_EMAILS_FILE = 'recievers.txt'
 def sendMail():
 
     try:
-
-        sender_address = SENDER_EMAIL
+        
         printTime = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         mail_content = open(EMAIL_TEMPLATE_FILE).read()
         receiver_address = open(RECIEVERS_EMAILS_FILE).read().splitlines()# read the emails without \n
@@ -30,7 +29,7 @@ def sendMail():
         for reciever in receiver_address:
             #Setup the MIME
             message = MIMEMultipart()
-            message['From'] = sender_address
+            message['From'] = SENDER_EMAIL
             message['To'] = reciever
             message['Subject'] = 'Daily Report
             
@@ -47,9 +46,9 @@ def sendMail():
             #Create SMTP session and send the email
             session = smtplib.SMTP(MAIL_SERVER, PORT) #use gmail with port
             session.starttls() #enable security
-            session.login(sender_address, SENDER_PSW) #login with mail_id and password
+            session.login(SENDER_EMAIL, SENDER_PSW) #login with mail_id and password
             text = message.as_string()
-            session.sendmail(sender_address, reciever, text)
+            session.sendmail(SENDER_EMAIL, reciever, text)
             session.quit()
 
             #Write to logs
