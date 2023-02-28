@@ -1,20 +1,3 @@
-''' You work at a company that sends daily reports to clients via email. The goal of this project is to automate the process of sending these reports via email.
-
-Here are the steps you can take to automate this process:
-
-    Done - Use the smtplib library to connect to the email server and send the emails.
-
-    Done - Use the email library to compose the email, including the recipient's email address, the subject, and the body of the email.
-
-    Done - Use the os library to access the report files that need to be sent.
-
-    Done - Use a for loop to iterate through the list of recipients and send the email and attachment.
-
-    Done - Use the schedule library to schedule the script to run daily at a specific time.
-
-    Done - You can also set up a log file to keep track of the emails that have been sent and any errors that may have occurred during the email sending process. '''
-
-
 import smtplib
 from os.path import basename
 from email.mime.multipart import MIMEMultipart
@@ -49,9 +32,9 @@ def sendMail():
             message = MIMEMultipart()
             message['From'] = sender_address
             message['To'] = reciever
-            message['Subject'] = 'Daily Report'   #The subject line
+            message['Subject'] = 'Daily Report
             
-            #attach the Attachement using basename avoiding using relative or path
+            #Attach the attachement using basename avoiding using relative or absolute path
             filename = 'Report.txt'
             with open(filename, 'r') as f: #open the file
                 attachement =  MIMEApplication(f.read(), Name=basename(filename)) #read the contects and define the object
@@ -61,7 +44,7 @@ def sendMail():
             #The body and the attachments for the mail
             message.attach(MIMEText(mail_content, 'plain'))
 
-            #Create SMTP session for sending the mail
+            #Create SMTP session and send the email
             session = smtplib.SMTP(MAIL_SERVER, PORT) #use gmail with port
             session.starttls() #enable security
             session.login(sender_address, SENDER_PSW) #login with mail_id and password
@@ -88,11 +71,9 @@ def main():
     # Run daily at 08:00
     schedule.every().day.at("08:00").do(sendMail)
 
-    # Loop so that the scheduling task
-    # keeps on running all time.
+    # Loop so that the scheduling task keeps on running all time.
     while True:
-        # Checks whether a scheduled task
-        # is pending to run or not
+        # Checks whether a scheduled task is pending to run or not
         schedule.run_pending()
         time.sleep(1)
 
