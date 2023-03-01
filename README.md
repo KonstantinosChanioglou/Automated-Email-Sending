@@ -1,6 +1,6 @@
 # Automating-Email-Sending
 
-This project sends daily scheduled emails with attachement to a list of emails. In addition writing all the sending history or errors to a log file.
+This project sends daily scheduled emails with attachement to a list of emails. In addition it writes all the email sending history or errors to a log file.
 
 ## Before running
 
