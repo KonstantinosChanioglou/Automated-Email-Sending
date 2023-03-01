@@ -7,8 +7,6 @@ import schedule
 import time
 import datetime
 
-#pip install schedule
-
 SENDER_EMAIL = '' #add your email
 SENDER_PSW = '' #if gmail, generate and add your gmail app password
 MAIL_SERVER ='smtp.gmail.com' #change according to your mail account
