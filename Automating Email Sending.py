@@ -31,7 +31,7 @@ def sendMail():
             message = MIMEMultipart()
             message['From'] = SENDER_EMAIL
             message['To'] = reciever
-            message['Subject'] = 'Daily Report
+            message['Subject'] = 'Daily Report'
             
             #Attach the attachement using basename avoiding using relative or absolute path
             filename = 'Report.txt'
