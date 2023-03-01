@@ -22,7 +22,7 @@ This project sends daily scheduled emails with attachement to a list of emails. 
 ### Note: if you are using gmail server generate an app password from your google account
 
 ## How to run
-+ python autoEmailSending.py
++ python '.\Automating Email Sending.py'
 
 
 
