@@ -8,7 +8,7 @@ This project sends daily scheduled emails with attachement to a list of emails. 
 + pip install schedule
 
 ### Fill the next fields:
-+ SENDER_EMAIL
+++ SENDER_EMAIL
 + SENDER_PSW 
 + MAIL_SERVER 
 + PORT 
